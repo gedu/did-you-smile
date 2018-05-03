@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../funscreen/fun_screen.dart';
+import '../graph/graph_screen.dart';
 
 import '../common/widget_key.dart';
 
@@ -28,7 +29,7 @@ class HomeState extends State<Home> {
       home: Scaffold(
         body: PageView(
           children: <Widget>[
-            Container(color: Colors.amber),
+            GraphScreen(),
             FunScreen(),
             Container(color: Colors.deepOrange),
           ],
