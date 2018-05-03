@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../funscreen/fun_screen.dart';
+
+import '../common/widget_key.dart';
+
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => HomeState();
@@ -8,6 +12,8 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   PageController _pageController;
   int _currentPage;
+
+  int get currentPage => _currentPage;
 
   @override
   void initState() {
@@ -18,30 +24,31 @@ class HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: new PageView(
+        body: PageView(
           children: <Widget>[
-            new Container(color: Colors.amber),
-            new Container(color: Colors.cyan),
-            new Container(color: Colors.deepOrange),
+            Container(color: Colors.amber),
+            FunScreen(),
+            Container(color: Colors.deepOrange),
           ],
           controller: _pageController,
           onPageChanged: _onPageChanged,
         ),
         bottomNavigationBar: BottomNavigationBar(
+          key: Key(bottomNavigationKey),
           items: [
-            new BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.graphic_eq),
-              title: new Text("Graphs"),
+              title: Text("Graphs"),
             ),
-            new BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              title: new Text("Home"),
+              title: Text("Home"),
             ),
-            new BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.settings),
-              title: new Text("Settings"),
+              title: Text("Settings"),
             ),
           ],
           onTap: (pageNum) {
