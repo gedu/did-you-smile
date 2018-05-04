@@ -1,0 +1,1 @@
+const String fake_pic = "assets/images/cute_eyes.jpg";
