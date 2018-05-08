@@ -6,7 +6,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:smile/common/widget_key.dart';
+import 'package:smile/common/resource/widget_key.dart';
 //import 'package:test/test.dart';
 
 import 'package:smile/main.dart';

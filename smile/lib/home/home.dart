@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../funscreen/fun_screen.dart';
 import '../graph/graph_screen.dart';
 
-import '../common/widget_key.dart';
+import 'package:smile/common/resource/widget_key.dart';
 
 class Home extends StatefulWidget {
   @override

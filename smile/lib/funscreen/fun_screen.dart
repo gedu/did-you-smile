@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../common/widget_style.dart';
+import 'package:smile/common/resource/widget_style.dart';
 import '../common/assets_path.dart';
 
 class FunScreen extends StatefulWidget {
+
+  String _motivationalMessage = "I will prepare for my moment";
 
   @override
   State<StatefulWidget> createState() => _FunScreenState();
@@ -29,7 +31,7 @@ class _FunScreenState extends State<FunScreen> {
   Padding _buildHeader() {
     return Padding(
             padding: new EdgeInsets.only(top: 48.0),
-            child: Text("I will prepare for my moment", style: home_header,),
+            child: Text(widget._motivationalMessage, style: home_header,),
           );
   }
 
